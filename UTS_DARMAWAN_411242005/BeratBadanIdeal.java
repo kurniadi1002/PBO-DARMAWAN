@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class BeratBadanIdeal {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        char jenisKelamin;
+        int tinggiBadan;
+        int beratIdeal;
+        int beratBadan;
+        int selisih;
+        String kategori;
+        char ulang = 'Y';
+
+        do {
+
+            System.out.print("Pilih jenis kelamin (L/P) : ");
+            jenisKelamin = input.next().charAt(0);
+
+            System.out.print("Masukkan tinggi badan Kamu (dalam cm) : ");
+            tinggiBadan = input.nextInt();
+
+            if (jenisKelamin == 'L' || jenisKelamin == 'l') {
+                beratIdeal = tinggiBadan - 100;
+            } else {
+                beratIdeal = tinggiBadan - 110;
+            }
+
+            System.out.println("Berat badan ideal : "
+                    + beratIdeal + " Kg");
+
+            System.out.print("Masukkan berat badan Kamu : ");
+            beratBadan = input.nextInt();
+
+            selisih = beratBadan - beratIdeal;
+
+            if (beratBadan <= beratIdeal) {
+
+                kategori = "Kurus";
+
+                if (selisih < 0) {
+                    selisih = selisih * -1;
+                }
+
+                System.out.println("Kamu termasuk kategori "
+                        + kategori);
+
+                System.out.println("Kekurangan berat badan sebanyak "
+                        + selisih + " Kg");
+
+            } else {
+
+                kategori = "Gemuk";
+
+                System.out.println("Kamu termasuk kategori "
+                        + kategori);
+
+                System.out.println("Harus mengurangi berat badan "
+                        + selisih + " Kg");
+            }
+
+            System.out.print("Ulang program? (Y/T) : ");
+            ulang = input.next().charAt(0);
+
+            System.out.println();
+
+        } while (ulang == 'Y' || ulang == 'y');
+
+        System.out.println("Program selesai.");
+    }
+}

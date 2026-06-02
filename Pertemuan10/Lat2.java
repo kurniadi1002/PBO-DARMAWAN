@@ -1,12 +1,9 @@
-
  import java.util.Scanner;
 
-// Kelas Enkapsulasi untuk Kalkulator
 class Kalkulator {
     private double nilaiSatu;
     private double nilaiDua;
 
-    // Setter
     public void setNilaiSatu(double nilaiSatu) {
         this.nilaiSatu = nilaiSatu;
     }
@@ -15,7 +12,6 @@ class Kalkulator {
         this.nilaiDua = nilaiDua;
     }
 
-    // Metode Aritmatika
     public double tambah() { return nilaiSatu + nilaiDua; }
     public double kurang() { return nilaiSatu - nilaiDua; }
     public double kali() { return nilaiSatu * nilaiDua; }
@@ -28,7 +24,6 @@ class Kalkulator {
     }
 }
 
-/// Main Class
 public class Lat2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

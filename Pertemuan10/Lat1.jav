@@ -25,12 +25,11 @@ public class Lat1 {
         System.out.println("=== Hitung Volume Silinder ===");
         System.out.print("Masukkan nilai Radius: ");
         double r = input.nextDouble();
-        silinder.setRadius(r); // Input dimasukkan lewat setter
+        silinder.setRadius(r); 
 
         System.out.print("Masukkan nilai Tinggi: ");
         double t = input.nextDouble();
-        silinder.setTinggi(t); // Input dimasukkan lewat setter
-
+        silinder.setTinggi(t);
         System.out.printf("Volume Silinder: %.2f\n", silinder.hitungVolume());
         
         input.close();
